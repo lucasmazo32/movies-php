@@ -19,7 +19,6 @@
 
     const enableButton = () => {
         buttonElement.removeAttribute("disabled")
-        console.log(usernameValid, phoneValid, emailValid, passwordValid)
         if (!usernameValid || !phoneValid || !emailValid || !passwordValid) {
             buttonElement.setAttribute("disabled", "disabled")
         }

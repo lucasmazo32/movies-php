@@ -20,8 +20,8 @@ const createMovieElement = (movie) => {
 }
 
 const movieRendering = () => {
-    const table = document.getElementById('table')
-    table.innerHTML = "<tr><th>Title</th><th>Year</th><th>Type</th><th>Poster</th></tr>"
+    const table = document.getElementById('table-body')
+    table.innerHTML = ""
     const elMovies = movies.map(m => {
         return createMovieElement(m)
     })
@@ -49,16 +49,16 @@ const radioListeners = () => {
     const inputs = document.getElementsByTagName('input')
 
     const handleChange = (e) => {
-        const value = e.target.value
-        if (value === 'asc' || value === 'desc') {
-            order = value
+        const name = e.target.name
+        if (name === 'order') {
+            order = e.target.checked ? 'asc' : 'desc'
         } else {
-            orderBy = value
+            orderBy = e.target.checked ? 'title' : 'year'
         }
         movieOrdering()
     }
     for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i].type === 'radio') {
+        if (inputs[i].type === 'checkbox') {
             inputs[i].addEventListener('change', handleChange)
         }
     }
@@ -80,7 +80,6 @@ const handleSubmitFn = () => {
             movieOrdering()
         }).catch(e => console.log(e))
     }
-
     searchForm.addEventListener('submit', handleSubmit)
 }
 
