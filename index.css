@@ -1,0 +1,161 @@
+﻿body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+.container {
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.center {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    gap: 16px;
+    width: 300px;
+    max-width: 100vw;
+}
+
+.f-fcol {
+    display: flex;
+    flex-flow: column;
+}
+
+.label {
+    gap: 4px;
+    color: #545454;
+}
+
+    .label span {
+        color: #f87272;
+    }
+
+.error {
+    color: #f87272;
+}
+
+input {
+    background: #f3f3f3;
+    color: #484848;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.submit {
+    background: #c6c6c6;
+    border: none;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 16px;
+    font-size: 18px;
+    border-radius: 9999px;
+    color: black;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.fit {
+    width: fit-content;
+}
+
+.self-end {
+    align-self: flex-end;
+}
+
+.submit:disabled {
+    cursor: not-allowed;
+    color: #939393;
+    background: #f5f5f5;
+}
+
+.search-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 32px;
+}
+
+.search-form {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.sort-container {
+    display: flex;
+    gap: 16px;
+}
+
+    .sort-container fieldset {
+        display: flex;
+        flex-flow: column;
+        border: none;
+        margin: 0;
+        padding: 0;
+        gap: 8px;
+    }
+
+        .sort-container fieldset label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+    .sort-container input {
+        margin: 0;
+    }
+
+.table-container {
+    margin-top: 40px;
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+}
+
+    .table th {
+        background-color: #eaeaea;
+        height: 36px;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    .table td {
+        background-color: #f5f5f5;
+        height: 36px;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    .table tr th:first-of-type {
+        width: 30%;
+    }
+
+    .table tr th:nth-of-type(2) {
+        width: 10%;
+    }
+
+    .table tr th:nth-of-type(3) {
+        width: 10%;
+    }
+
+.search-title {
+    width: 360px;
+}
+
+.search-date {
+    width: 72px;
+}
